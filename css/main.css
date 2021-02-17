@@ -154,19 +154,19 @@ footer a:not(.nav-link) {
 
 .avatar {
     border: #000;
-    width: 180px;
-    height: 180px;
+    width: 200px;
+    height: 200px;
     overflow: hidden;
 }
 
 .avatar div {
-    width: 164px;
-    height: 164px;
+    width: 184px;
+    height: 184px;
     overflow: hidden;
 }
 
 .avatar div img {
-    width: 164px;
+    width: 184px;
 }
 
 @media (min-width: 48em) {
