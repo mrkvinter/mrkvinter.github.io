@@ -85,16 +85,16 @@ const projectsData = [
         desc: 'A large-scale classic RPG. Contributed to the development of core architecture and systems.',
         link: 'https://store.steampowered.com/app/2186680/Warhammer_40000_Rogue_Trader/',
         icon: '⚔️',
-        tags: ['rpg', 'work']
+        tags: ['game', 'work']
     },
     {
         title: 'Die to Play',
         type: 'Indie Roguelike',
         role: 'Lead/Solo',
-        desc: 'Personal project on Steam. Managed the full development cycle and team leadership.',
+        desc: 'A 2D game inside a 3D world — dice-based roguelike with horror elements. Managing the full development cycle solo, from concept to Steam launch.',
         link: 'https://store.steampowered.com/app/3784360/Die_to_Play/',
         icon: '🎲',
-        tags: ['indie']
+        tags: ['game', 'indie']
     },
     {
         title: 'Sharp Compose',
@@ -112,7 +112,7 @@ const projectsData = [
         desc: 'A machinery construction game. Performed a complete refactoring of the netcode and UI.',
         link: 'https://store.steampowered.com/app/1856190/Hello_Engineer/',
         icon: '⚙️',
-        tags: ['work']
+        tags: ['game', 'work']
     },
     {
         title: 'Itch.io Tag Explorer',
@@ -130,7 +130,7 @@ const projectsData = [
         desc: 'Developed meta-gameplay, Battle Pass systems, and inventory mechanics.',
         link: 'https://store.steampowered.com/app/2295520/Gladiators_Survival_in_Rome/',
         icon: '🏛️',
-        tags: ['rpg', 'work']
+        tags: ['game', 'work']
     },
     {
         title: 'Daisho: Survival of a Samurai',
@@ -139,7 +139,7 @@ const projectsData = [
         desc: 'Action RPG set in a Japanese setting. Developed UI systems and in-game events.',
         link: 'https://store.steampowered.com/app/2502650/Daisho_Survival_of_a_Samurai/',
         icon: '👹',
-        tags: ['rpg', 'work']
+        tags: ['game', 'work']
     },
     {
         title: 'TextAnimations',
@@ -151,13 +151,22 @@ const projectsData = [
         tags: ['tool']
     },
     {
+        title: 'KingdomOS',
+        type: 'Game Jam (48h)',
+        role: 'Solo Dev',
+        desc: '8th place in Ludum Dare 56 Compo. Solo Unity game built from scratch in 48 hours — rapid prototyping at its best.',
+        link: 'https://github.com/mrkvinter/LD-56',
+        icon: '👑',
+        tags: ['game', 'indie']
+    },
+    {
         title: 'Divide By Sheep 2',
         type: 'Puzzle',
         role: 'Developer',
         desc: 'Mathematical puzzle game. Developed UI and core level logic.',
         link: 'https://store.steampowered.com/app/2678960/Divide_By_Sheep_2/',
         icon: '🐑',
-        tags: ['work']
+        tags: ['game', 'work']
     }
 ];
 
@@ -294,7 +303,8 @@ function renderProjects(filter) {
     
     grid.innerHTML = filtered.map(p => {
         const isGithub = p.link.includes('github.com');
-        const buttonText = isGithub ? 'View on GitHub' : 'View in Store';
+        const isSteam = p.link.includes('steampowered.com');
+        const buttonText = isGithub ? 'View on GitHub' : isSteam ? 'View in Store' : 'Open Project';
         return `
         <a href="${p.link}" target="_blank" class="block bg-white rounded-xl shadow-sm border border-stone-200 p-6 card-hover transition-transform duration-200 group h-full flex flex-col">
             <div class="flex justify-between items-start mb-4">
