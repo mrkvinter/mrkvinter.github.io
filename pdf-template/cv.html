@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arseniy Rogovoy — CV</title>
+  <style>
+    :root {
+      --page-bg: #efefef;
+      --paper: #ffffff;
+      --text: #2f3542;
+      --muted: #5e6673;
+      --accent: #d97706;
+      --line: #d9d9d9;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--page-bg);
+      color: var(--text);
+      font-family: Inter, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.4;
+    }
+
+    body {
+      padding: 24px 0;
+    }
+
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 0 auto 18px;
+      background: var(--paper);
+      padding: 18mm 16mm 16mm;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    }
+
+    h1, h2, h3, p {
+      margin: 0;
+    }
+
+    .name {
+      font-size: 22pt;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 4px;
+    }
+
+    .role {
+      font-size: 11pt;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 10px;
+    }
+
+    .contacts {
+      display: grid;
+      gap: 4px;
+      font-size: 10pt;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .contacts a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .section {
+      margin-top: 18px;
+    }
+
+    .section-title {
+      font-size: 11pt;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color: var(--text);
+      margin-bottom: 8px;
+      padding-bottom: 6px;
+      border-bottom: 3px solid var(--accent);
+    }
+
+    .summary {
+      font-size: 10.5pt;
+      color: var(--text);
+      max-width: 170mm;
+    }
+
+    .competencies {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 18px;
+    }
+
+    .competency {
+      border-left: 3px solid var(--accent);
+      padding-left: 8px;
+    }
+
+    .competency-title {
+      font-size: 10.5pt;
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+
+    .competency-level {
+      font-size: 10pt;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 18px;
+      font-size: 10pt;
+      color: #7a3f0c;
+      font-weight: 500;
+    }
+
+    .stack span {
+      white-space: nowrap;
+    }
+
+    .job {
+      margin-bottom: 18px;
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+
+    .job-title {
+      font-size: 11pt;
+      font-weight: 800;
+      margin-bottom: 2px;
+    }
+
+    .job-date {
+      font-size: 9.5pt;
+      color: var(--muted);
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+
+    .job-company {
+      font-size: 10pt;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .job-summary {
+      font-size: 10pt;
+      color: var(--muted);
+      font-style: italic;
+      margin-bottom: 8px;
+    }
+
+    .bullets {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    .bullets li {
+      margin: 3px 0;
+      font-size: 10pt;
+    }
+
+    .project {
+      margin-bottom: 12px;
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+
+    .project-title {
+      font-size: 10.8pt;
+      font-weight: 800;
+      margin-bottom: 2px;
+    }
+
+    .project-meta {
+      font-size: 10pt;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 2px;
+    }
+
+    .project-desc {
+      font-size: 10pt;
+      color: var(--muted);
+    }
+
+    .achievements {
+      margin: 0;
+      padding-left: 0;
+      list-style: none;
+    }
+
+    .achievements li {
+      font-size: 10pt;
+      margin: 5px 0;
+      padding-left: 18px;
+      position: relative;
+    }
+
+    .achievements li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--accent);
+      font-weight: 800;
+    }
+
+    .footer-note {
+      margin-top: 14px;
+      padding-top: 8px;
+      border-top: 1px solid var(--line);
+      text-align: center;
+      font-size: 9pt;
+      color: var(--muted);
+    }
+
+    @media (max-width: 700px) {
+      .competencies {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media print {
+      @page {
+        size: A4;
+        margin: 0;
+      }
+
+      body {
+        background: #fff;
+        padding: 0;
+      }
+
+      .page {
+        margin: 0;
+        box-shadow: none;
+        width: 210mm;
+        min-height: 297mm;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="name">Arseniy Rogovoy</div>
+      <div class="role">Senior Unity Developer | UI Architect</div>
+      <div class="contacts">
+        <div>📍 Riga, Latvia</div>
+        <div>🔗 <a href="https://github.com/mrkvinter">GitHub</a></div>
+        <div>🎮 <a href="https://mrkvinter.itch.io/">Itch.io</a></div>
+      </div>
+    </header>
+
+    <section class="section">
+      <div class="section-title">Professional Summary</div>
+      <p class="summary">Senior Unity C# Developer with 10 years of experience creating games since age 14. Expert in Unity UI systems (uGUI, Toolkit), complex system architecture, and optimization.</p>
+    </section>
+
+    <section class="section">
+      <div class="section-title">Core Competencies</div>
+      <div class="competencies">
+        <div class="competency"><div class="competency-title">Unity UI (Toolkit/uGUI)</div><div class="competency-level">Expert</div></div>
+        <div class="competency"><div class="competency-title">C# Architecture</div><div class="competency-level">Expert</div></div>
+        <div class="competency"><div class="competency-title">Optimization & Memory</div><div class="competency-level">Senior</div></div>
+        <div class="competency"><div class="competency-title">Gameplay Systems</div><div class="competency-level">Strong</div></div>
+        <div class="competency"><div class="competency-title">Team Leadership</div><div class="competency-level">Advanced</div></div>
+        <div class="competency"><div class="competency-title">Networking</div><div class="competency-level">Advanced</div></div>
+      </div>
+    </section>
+
+    
+
+    <section class="section">
+      <div class="section-title">Technical Stack</div>
+      <div class="stack">
+        <span>Unity</span><span>C#</span><span>uGUI</span><span>UI Toolkit</span><span>IMGUI</span><span>Canvas</span><span>Responsive Design</span><span>Animation</span><span>Tweening</span><span>Particle Systems</span>
+        <span>Shaders</span><span>Git</span><span>TeamCity</span><span>UniTask</span><span>Coroutines</span><span>Jobs System</span><span>Burst Compiler</span><span>Performance Profiling</span>
+        <span>Memory Management</span><span>FMOD</span><span>Addressables</span><span>Zenject</span><span>VContainer</span><span>ECS</span><span>MVP</span><span>MVVM</span><span>MVU</span><span>MVC</span>
+        <span>OOP</span><span>SOLID</span><span>Design Patterns</span><span>Unit Testing</span><span>Mobile Optimization</span><span>Console Dev</span><span>Networking</span><span>CI/CD</span>
+        <span>Agile/Scrum</span><span>Code Review</span><span>ASP.NET</span><span>.NET Framework</span><span>React</span><span>WinForms</span><span>WPF</span><span>Visual Studio</span><span>Rider</span>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">Languages</div>
+      <div class="competencies">
+        <div class="competency"><div class="competency-title">Russian</div><div class="competency-level">Fluent</div></div>
+        <div class="competency"><div class="competency-title">English</div><div class="competency-level">B1+</div></div>
+        <div class="competency"><div class="competency-title">Latvian</div><div class="competency-level">A2</div></div>
+      </div>
+    </section>
+  </div>
+
+  <div class="page">
+    <section class="section" style="margin-top:0;">
+      <div class="section-title">Work Experience</div>
+
+      <article class="job">
+        <div class="job-title">Senior Unity Developer</div>
+        <div class="job-date">Apr 2024 - Present</div>
+        <div class="job-company">Perfect Play</div>
+        <div class="job-summary">Full-cycle feature development and CI/CD stabilization.</div>
+        <ul class="bullets">
+          <li>Implemented key systems: Battle Route, MVP & Battle Stats (UI/Animations)</li>
+          <li>Conducted Code/Lead Reviews and task decomposition</li>
+          <li>Developed internal tools: cheat panels, MessagePack Viewer</li>
+          <li>Optimized scripting, timers, and the build process</li>
+          <li>Resolved critical bugs (NREs, freezes, crashes)</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <div class="job-title">Senior Unity C# Developer</div>
+        <div class="job-date">Sep 2022 - Nov 2023</div>
+        <div class="job-company">Colossi Games</div>
+        <div class="job-summary">Development of Action RPG mechanics and engagement systems.</div>
+        <ul class="bullets">
+          <li>Developed competitive ranking system</li>
+          <li>Implemented Battle Pass system and its UI</li>
+          <li>Created flexible perk system to deepen gameplay</li>
+          <li>Developed dynamic event system for player retention</li>
+          <li>Developed UI, player abilities, and editor tools</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <div class="job-title">Senior Unity Developer</div>
+        <div class="job-date">Oct 2021 - Jan 2022</div>
+        <div class="job-company">Owlcat Games</div>
+        <div class="job-summary">Worked on the large-scale CRPG Warhammer 40,000: Rogue Trader.</div>
+        <ul class="bullets">
+          <li>Developed console game systems in Unity</li>
+          <li>Designed application architecture</li>
+          <li>Wrote testing framework</li>
+          <li>Conducted technical interviews</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <div class="job-title">Senior Unity C# Developer</div>
+        <div class="job-date">Jan 2020 - Oct 2021</div>
+        <div class="job-company">tinyBuild</div>
+        <div class="job-summary">Hello Engineer. Refactoring and implementation of industry standards.</div>
+        <ul class="bullets">
+          <li>Rewrote architecture, decoupling &quot;spaghetti code&quot; into independent modules</li>
+          <li>Implemented Gitflow, Code Review, and CI practices</li>
+          <li>Developed core mechanics (player state machine, network synchronization, UI)</li>
+          <li>Managed sub-team (task decomposition, estimation)</li>
+        </ul>
+      </article>
+
+      <article class="job" style="margin-bottom:0;">
+        <div class="job-title">C# Developer</div>
+        <div class="job-date">Jul 2016 - Jun 2019</div>
+        <div class="job-company">SKB Kontur</div>
+        <div class="job-summary">Developed desktop and cloud applications for user data migration.</div>
+        <ul class="bullets">
+          <li>Developed desktop applications (WinForms and WPF) with intuitive interfaces</li>
+          <li>Implemented cloud applications on ASP.NET for user data synchronization</li>
+          <li>Frontend development using React for web interfaces</li>
+          <li>Integrated various components to ensure reliable data migration</li>
+        </ul>
+      </article>
+    </section>
+  </div>
+
+  <div class="page">
+    <section class="section" style="margin-top:0;">
+      <div class="section-title">Featured Projects</div>
+
+      <article class="project">
+        <div class="project-title">Warhammer 40k: Rogue Trader</div>
+        <div class="project-meta">AAA/CRPG | Senior Dev</div>
+        <div class="project-desc">Large-scale classic RPG. Contributed to the development of core architecture and systems.</div>
+      </article>
+
+      <article class="project">
+        <div class="project-title">Die to Play</div>
+        <div class="project-meta">Indie Roguelike | Lead/Solo</div>
+        <div class="project-desc">Personal project on Steam. Managed the full development cycle and team leadership.</div>
+      </article>
+
+      <article class="project">
+        <div class="project-title">Sharp Compose</div>
+        <div class="project-meta">Open Source | Author</div>
+        <div class="project-desc">High-performance C# UI framework utilizing the MVU pattern. Created custom UI system focused on performance and flexibility.</div>
+      </article>
+
+      <article class="project">
+        <div class="project-title">Hello Engineer</div>
+        <div class="project-meta">Construction/Action | Senior Dev</div>
+        <div class="project-desc">Machinery construction game. Performed complete refactoring of the netcode and UI.</div>
+      </article>
+
+      <article class="project">
+        <div class="project-title">Itch.io Tag Explorer</div>
+        <div class="project-meta">Developer Tool | Author</div>
+        <div class="project-desc">Built a public web tool for researching itch.io tag rankings and game discoverability. Helps developers analyze visibility across tags with cached updates.</div>
+      </article>
+
+      <article class="project">
+        <div class="project-title">Daisho: Survival of a Samurai</div>
+        <div class="project-meta">Action RPG | Senior Dev</div>
+        <div class="project-desc">Action RPG set in Japanese setting. Developed UI systems and in-game events.</div>
+      </article>
+    </section>
+
+    <section class="section">
+      <div class="section-title">Key Achievements</div>
+      <ul class="achievements">
+        <li>Created own UI framework (Sharp Compose) with focus on performance and flexibility</li>
+        <li>Led team management and task decomposition in multiple projects</li>
+        <li>Implemented Gitflow and code review practices across teams</li>
+        <li>Authored multiple Unity libraries and tools</li>
+        <li>Successfully shipped multiple AAA and indie games</li>
+        <li>Achieved 8th place in Ludum Dare 56 Compo with KingdomOS, a solo Unity game built in 48 hours</li>
+        <li>Expert in complex UI architecture (MVU/MVP/MVVM patterns)</li>
+      </ul>
+
+      <div class="footer-note">
+        Interactive Resume: <span style="color:var(--accent);">mrkvinter.github.io</span><br />
+        Generated from portfolio website | Kvinter Games
+      </div>
+    </section>
+  </div>
+</body>
+</html>
