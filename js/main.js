@@ -21,7 +21,7 @@ const experienceData = [
         id: 'colossi',
         role: 'Senior Unity C# Developer',
         company: 'Colossi Games',
-        date: 'Dec 2022 - Nov 2023',
+        date: 'Sep 2022 - Nov 2023',
         summary: 'Development of Action RPG mechanics and engagement systems.',
         tasks: [
             'Ranking System: Developed a competitive ranking system.',
@@ -100,7 +100,7 @@ const projectsData = [
         title: 'Sharp Compose',
         type: 'Open Source',
         role: 'Author',
-        desc: 'High-performance C# UI framework utilizing the MVU pattern.',
+        desc: 'High-performance C# UI framework utilizing the MVU pattern. Custom UI system focused on performance and flexibility.',
         link: 'https://github.com/mrkvinter/sharp.compose',
         icon: '🛠️',
         tags: ['tool']
@@ -113,6 +113,15 @@ const projectsData = [
         link: 'https://store.steampowered.com/app/1856190/Hello_Engineer/',
         icon: '⚙️',
         tags: ['work']
+    },
+    {
+        title: 'Itch.io Tag Explorer',
+        type: 'Developer Tool',
+        role: 'Author',
+        desc: 'Public web tool for researching itch.io tag rankings and game discoverability. Helps developers analyze visibility across tags with cached updates.',
+        link: 'https://kvinter.games/dev/tag-explorer',
+        icon: '🔍',
+        tags: ['tool']
     },
     {
         title: 'Gladiators: Survival in Rome',
@@ -160,7 +169,7 @@ document.addEventListener('DOMContentLoaded', () => {
     new Chart(ctx, {
         type: 'radar',
         data: {
-            labels: ['Unity UI (Toolkit/uGUI)', 'C# Architecture', 'Optimization', 'Game Design (RPG)', 'Team Lead', 'Networking'],
+            labels: ['Unity UI (Toolkit/uGUI)', 'C# Architecture', 'Optimization & Memory', 'Gameplay Systems', 'Team Leadership', 'Networking'],
             datasets: [{
                 label: 'Skill Level',
                 data: [98, 93, 89, 84, 78, 84],
