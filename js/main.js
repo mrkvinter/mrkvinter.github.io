@@ -3,17 +3,44 @@
 // Experience Data (Quest Log)
 const experienceData = [
     {
+        id: 'tinybuild-2026',
+        role: 'Senior Unity Developer (B2B contract)',
+        company: 'tinyBuild',
+        date: 'Apr 2026 - Sep 2026',
+        summary: 'Open-world game (NDA): streaming performance, tools and gameplay.',
+        tasks: [
+            'Optimized open-world level streaming (async loading, time-slicing across frames, object pooling) so new areas load without frame-time spikes.',
+            'Built debug tools: a runtime panel (time scale, FPS limit, per-channel log levels) and a save browser that starts the game from any saved state.',
+            'Implemented gameplay mechanics, UI windows and localization.'
+        ],
+        stack: ['Unity', 'C#', 'Profiling', 'Streaming', 'Editor Tools']
+    },
+    {
+        id: 'kvinter',
+        role: 'Founder & Lead Developer',
+        company: 'Kvinter Games',
+        date: 'Nov 2024 - Present',
+        summary: 'Die to Play: dice deckbuilding roguelite (Unity 6, Steam release in 2027). Part-time.',
+        tasks: [
+            'Sole engineer, leading a team of 5; ~3,000 Steam wishlists and ~250 playtesters so far.',
+            'Modular architecture with VContainer DI, MessagePipe event bus and UniTask; ~250 unit tests.',
+            'Headless balance simulation: a bot plays the real game at 100x speed; a 3,700-run test showed which items really affect win rate.',
+            'Event-driven analytics (PostHog, GameAnalytics, Sentry), Steam release pipeline, 9-language localization.'
+        ],
+        stack: ['Unity 6', 'URP', 'VContainer', 'MessagePipe', 'UniTask', 'PostHog']
+    },
+    {
         id: 'perfectplay',
         role: 'Senior Unity Developer',
-        company: 'Perfect Play',
-        date: 'Apr 2024 - Present',
-        summary: 'Full-cycle feature development and CI/CD stabilization.',
+        company: 'Perfect Play (Playrix group)',
+        date: 'Apr 2024 - Apr 2026',
+        summary: 'Questbound: mid-core hero battler for mobile. Feature development, tools and CI/CD.',
         tasks: [
-            'Implemented key systems: Battle Route, MVP & Battle Stats (UI/Animations).',
-            'Conducted Code/Lead Reviews and task decomposition.',
-            'Developed internal tools: cheat panels, MessagePack Viewer.',
-            'Optimized scripting, timers, and the build process.',
-            'Resolved critical bugs (NREs, freezes, crashes).'
+            'Delivered features end to end, including Resonance, Shards, Battle Route and MVP & Battle Stats: gameplay logic, UI and animation, server integration.',
+            'Code reviews and task breakdown for other developers.',
+            'Stabilized CI/CD on TeamCity and sped up the build process.',
+            'Developed internal tools: cheat panel and commands, MessagePack data viewer, logging and profiling improvements.',
+            'Reduced crashes and freezes; fixed blockers and regressions.'
         ],
         stack: ['Unity', 'C#', 'TeamCity', 'UniTask', 'FMOD', 'Addressables']
     },
@@ -21,44 +48,57 @@ const experienceData = [
         id: 'colossi',
         role: 'Senior Unity C# Developer',
         company: 'Colossi Games',
-        date: 'Sep 2022 - Nov 2023',
-        summary: 'Development of Action RPG mechanics and engagement systems.',
+        date: 'Sep 2022 - Dec 2023',
+        summary: 'Gladiators: Survival in Rome and Daisho: Survival of a Samurai: F2P action RPGs (iOS, Android, PC).',
         tasks: [
             'Ranking System: Developed a competitive ranking system.',
             'Battle Pass: Implemented the Battle Pass system and its UI.',
-            'Perks & Attributes: Created a flexible perk system to deepen gameplay.',
+            'Perks & Attributes: Created a flexible perk system to deepen gameplay; inventory mechanics.',
             'Game Events: Developed a dynamic event system for player retention.',
+            'Wrote gameplay logic in shared code running on both client and server, plus some server-side code.',
             'Developed UI, player abilities, and editor tools.'
         ],
-        stack: ['Action RPG', 'UI Systems', 'Ranking', 'Battle Pass']
+        stack: ['Action RPG', 'Live-Ops', 'UI Systems', 'Client/Server', 'Battle Pass']
+    },
+    {
+        id: 'tinybuild-dbs2',
+        role: 'Unity Developer (B2B contract, part-time)',
+        company: 'tinyBuild',
+        date: 'Sep 2022 - Jul 2023',
+        summary: 'Divide By Sheep 2: mathematical puzzle game (iOS, PC).',
+        tasks: [
+            'Developed UI and core level logic.',
+            'Integrated analytics and crash reporting; built internal tools.',
+            'Made targeted architecture improvements and moved game configs to my own Content System.'
+        ],
+        stack: ['Unity', 'C#', 'UI', 'Analytics', 'Content System']
     },
     {
         id: 'owlcat',
         role: 'Senior Unity Developer',
         company: 'Owlcat Games',
         date: 'Oct 2021 - Jan 2022',
-        summary: 'Worked on the large-scale CRPG Warhammer 40,000: Rogue Trader.',
+        summary: 'Worked on the large-scale CRPG Warhammer 40,000: Rogue Trader (in development).',
         tasks: [
-            'Developed console game systems in Unity.',
-            'Designed application architecture.',
-            'Wrote a testing framework.',
-            'Conducted technical interviews.'
+            'Developed and refined core logic of the stealth system.',
+            'Polished the internal dialogue editor UI for the narrative team.',
+            'Automated dialogue export to spreadsheets for localization.'
         ],
-        stack: ['CRPG', 'Architecture', 'Testing Framework', 'Console Dev']
+        stack: ['CRPG', 'Gameplay', 'Tools', 'Localization']
     },
     {
         id: 'tinybuild',
-        role: 'Senior Unity C# Developer',
+        role: 'Unity Developer → Senior Unity C# Developer',
         company: 'tinyBuild',
         date: 'Jan 2020 - Oct 2021',
-        summary: 'Hello Engineer. Refactoring and implementation of industry standards.',
+        summary: 'Hello Engineer: 4-player online co-op. Refactoring and industry-standard practices.',
         tasks: [
             'Rewrote the architecture, decoupling "spaghetti code" into independent modules.',
             'Implemented Gitflow, Code Review, and CI practices.',
-            'Developed core mechanics (player state machine, network synchronization, UI).',
-            'Managed a sub-team (task decomposition, estimation).'
+            'Developed core mechanics (player state machine, host-client networking, UI), a test framework and tests.',
+            'Helped lead the team: task breakdown and estimation; conducted technical interviews.'
         ],
-        stack: ['Refactoring', 'Networking', 'Architecture', 'Mentoring']
+        stack: ['Refactoring', 'Networking', 'Architecture', 'Leadership']
     },
     {
         id: 'skb-kontur',
@@ -69,7 +109,7 @@ const experienceData = [
         tasks: [
             'Developed desktop applications (WinForms and WPF) with intuitive interfaces.',
             'Implemented cloud applications on ASP.NET for user data synchronization.',
-            'Frontend development using React for web interfaces.',
+            'Some React for web interfaces.',
             'Integrated various components to ensure reliable data migration.'
         ],
         stack: ['C#', 'WinForms', 'WPF', 'ASP.NET', 'React']
@@ -80,9 +120,9 @@ const experienceData = [
 const projectsData = [
     {
         title: 'Warhammer 40k: Rogue Trader',
-        type: 'AAA/CRPG',
+        type: 'CRPG',
         role: 'Senior Dev',
-        desc: 'A large-scale classic RPG. Contributed to the development of core architecture and systems.',
+        desc: 'A large-scale classic RPG. Worked on it during development (2021-22): stealth logic, dialogue editor and localization tools.',
         link: 'https://store.steampowered.com/app/2186680/Warhammer_40000_Rogue_Trader/',
         icon: '⚔️',
         tags: ['game', 'work']
@@ -90,8 +130,8 @@ const projectsData = [
     {
         title: 'Die to Play',
         type: 'Indie Roguelike',
-        role: 'Lead/Solo',
-        desc: 'A 2D game inside a 3D world — dice-based roguelike with horror elements. Managing the full development cycle solo, from concept to Steam launch.',
+        role: 'Founder / Lead Dev',
+        desc: 'A 2D game inside a 3D world — dice-based roguelike with horror elements. Founder and sole engineer, leading a team of 5. ~3,000 wishlists; release planned for 2027.',
         link: 'https://store.steampowered.com/app/3784360/Die_to_Play/',
         icon: '🎲',
         tags: ['game', 'indie']
@@ -100,7 +140,7 @@ const projectsData = [
         title: 'Sharp Compose',
         type: 'Open Source',
         role: 'Author',
-        desc: 'High-performance C# UI framework utilizing the MVU pattern. Custom UI system focused on performance and flexibility.',
+        desc: 'Declarative C# UI framework inspired by Jetpack Compose (MVU pattern).',
         link: 'https://github.com/mrkvinter/sharp.compose',
         icon: '🛠️',
         tags: ['tool']
@@ -109,7 +149,7 @@ const projectsData = [
         title: 'Hello Engineer',
         type: 'Construction/Action',
         role: 'Senior Dev',
-        desc: 'A machinery construction game. Performed a complete refactoring of the netcode and UI.',
+        desc: '4-player online co-op machine builder. Refactored the codebase into modules; built host-client networking and UI.',
         link: 'https://store.steampowered.com/app/1856190/Hello_Engineer/',
         icon: '⚙️',
         tags: ['game', 'work']
@@ -127,7 +167,7 @@ const projectsData = [
         title: 'Gladiators: Survival in Rome',
         type: 'Action RPG',
         role: 'Senior Dev',
-        desc: 'Developed meta-gameplay, Battle Pass systems, and inventory mechanics.',
+        desc: 'F2P survival action RPG, 1M+ downloads on Google Play. Developed meta-gameplay, Battle Pass systems, and inventory mechanics.',
         link: 'https://store.steampowered.com/app/2295520/Gladiators_Survival_in_Rome/',
         icon: '🏛️',
         tags: ['game', 'work']
@@ -136,7 +176,7 @@ const projectsData = [
         title: 'Daisho: Survival of a Samurai',
         type: 'Action RPG',
         role: 'Senior Dev',
-        desc: 'Action RPG set in a Japanese setting. Developed UI systems and in-game events.',
+        desc: 'F2P action RPG in a Japanese setting, 1M+ downloads on Google Play. Developed UI systems and in-game events.',
         link: 'https://store.steampowered.com/app/2502650/Daisho_Survival_of_a_Samurai/',
         icon: '👹',
         tags: ['game', 'work']
@@ -154,18 +194,27 @@ const projectsData = [
         title: 'KingdomOS',
         type: 'Game Jam (48h)',
         role: 'Solo Dev',
-        desc: '8th place in Ludum Dare 56 Compo. Solo Unity game built from scratch in 48 hours — rapid prototyping at its best.',
-        link: 'https://github.com/mrkvinter/LD-56',
+        desc: '#8 Overall and #8 Fun of 404 entries in the Ludum Dare 56 Compo. Solo Unity game built from scratch in 48 hours.',
+        link: 'https://ldjam.com/events/ludum-dare/56/kingdomos',
         icon: '👑',
         tags: ['game', 'indie']
     },
     {
         title: 'Divide By Sheep 2',
         type: 'Puzzle',
-        role: 'Developer',
-        desc: 'Mathematical puzzle game. Developed UI and core level logic.',
+        role: 'Developer (contract)',
+        desc: 'Mathematical puzzle game. Developed UI and core level logic, analytics and internal tools; moved configs to my Content System.',
         link: 'https://store.steampowered.com/app/2678960/Divide_By_Sheep_2/',
         icon: '🐑',
+        tags: ['game', 'work']
+    },
+    {
+        title: 'Questbound',
+        type: 'Mobile Hero Battler',
+        role: 'Senior Dev',
+        desc: 'Mid-core hero battler for mobile by Perfect Play (Playrix group), in soft launch. Feature development, internal tools, CI/CD.',
+        link: 'https://play.google.com/store/apps/details?id=com.mg0.perfect_heroes',
+        icon: '🗡️',
         tags: ['game', 'work']
     }
 ];
